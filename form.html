@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <form action="/kirim" method="get">
+            <label for="nama">Nama</label><br>
+            <input type="text" id="nama" name="nama">
+            <br><br>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="no_hp">No HP</label><br>
+            <input type="tel" id="no_hp" name="no_hp"><br>
+            <br>
+            <label for="">Jenis Kelamin</label>
+            <br>
+            <input type="radio" name="jenis_kelamin" id="laki_laki" value="laki_laki">
+            <label for="laki_laki">Laki-Laki</label>
+            <br>
+            <input type="radio" name="jenis_kelamin" id="perempuan" value="perempuan">
+            <label for="perempuan">Perempuan</label><br>
+            <br>
+            <label for="prodi">Prodi</label><br>
+            <select name="prodi" id="prodi">
+                <option value="">Prodi</option>
+                <option value="teknik_komputer">Teknik Komputer</option>
+                <option value="teknik_informatika">Teknik Informatika</option>
+                <option value="desain_komunikasi_visual">Desain Komunikasi Visual</option>
+                <option value="teknik_mesin">Teknik Mesin</option>
+                <option value="akuntansi">Akuntansi</option>
+                <option value="manajemen">Manajemen</option>
+                <option value="keperawatan">Keperawatan</option>
+                <option value="bidan">Bidan</option>
+                <option value="farmasi">Farmasi</option>
+            </select>
+            <br><br>
+            <label for="hobi">Hobi</label><br>
+            <input type="checkbox" id="membaca" name="hobi" value="membaca">
+            <label for="membaca">Membaca</label><br>
+            <input type="checkbox" id="menulis" name="hobi" value="menulis">
+            <label for="menulis">Menulis</label><br>
+            <input type="checkbox" id="menyanyi" name="hobi" value="menyanyi">
+            <label for="menyanyi">Menyanyi</label><br>
+            <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+            <label for="olahraga">Olahraga</label><br>
+            <br>
+            <label for="alamat">Alamat</label><br>
+            <textarea name="alamat" id="alamat" cols="30" rows="5"></textarea><br>
+            <br>
+            <label for="foto">Foto Diri</label><br>
+            <input type="file" name="foto" id="foto">
+            <br><br>
+            <input type="button" onclick="buttonfunction()" value="Daftar">
+        </form>
+        <script>
+             function buttonfunction() {
+                alert("Data Berhasil disimpan");
+            }
+        </script>
+    </body>
+</html>
