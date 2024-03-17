@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.carousel-container {
+  margin: 20px 0; /* adjust top and bottom margin as needed */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 200px; /* adjust height as needed */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide-1 {
+  background-color: rgb(120, 133, 224);
+}
+
+.slide-2 {
+  background-color: rgb(143, 99, 5);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+h1 {
+  font-style: bold;
+  border-bottom: solid black;
+  color: rgb(149, 19, 209);
+  text-align: center;
+  letter-spacing: 5px;
+  margin-bottom: 20px; /* adjust bottom margin as needed */
+}
+div {
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: auto; /* ensure footer stays at the bottom */
+}
