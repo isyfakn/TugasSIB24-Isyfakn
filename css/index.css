@@ -11,14 +11,16 @@ body {
 }
 
 .carousel-container {
-  margin: 20px 0; /* adjust top and bottom margin as needed */
+  margin: 0px 0; /* adjust top and bottom margin as needed */
 }
 
 .carousel {
   position: relative;
-  width: 100%;
-  height: 200px; /* adjust height as needed */
+  width: 60%;
+  height: 300px; /* Sesuaikan tinggi sesuai kebutuhan */
+  margin: 0 auto; /* Mengatur posisi carousel di tengah */
 }
+
 
 .slide {
   position: absolute;
@@ -33,18 +35,10 @@ body {
   display: block;
 }
 
-.slide-1 {
-  background-color: rgb(120, 133, 224);
-}
-
-.slide-2 {
-  background-color: rgb(143, 99, 5);
-}
-
 .prev,
 .next {
   position: absolute;
-  top: 50%;
+  top: 50%; /* Mengatur posisi vertikal ke tengah */
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -53,24 +47,33 @@ body {
   color: white;
   font-size: 18px;
   cursor: pointer;
+  margin-top: -25px;
 }
 
 .prev {
-  left: 10px;
+  left: 30px;
 }
 
 .next {
-  right: 10px;
+  right: 30px;
 }
 
-h1 {
-  font-style: bold;
-  border-bottom: solid black;
-  color: rgb(149, 19, 209);
+h1{
+  font-family: "Alfa Slab One", serif;
+  font-weight: 100;
+  font-style: normal;
+  color: white;
   text-align: center;
-  letter-spacing: 5px;
-  margin-bottom: 20px; /* adjust bottom margin as needed */
+  letter-spacing: 10px;
+  margin-bottom: 20px; 
+  background-image: url("https://2.bp.blogspot.com/-6mcpYpvdSK0/XOYI2E3wbCI/AAAAAAAAEi0/V3edeXYcTbY6auorRQlNL8p11ragCUD2ACLcBGAs/s1600/violet-door.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
 }
+
+
 div {
   text-align: center;
 }
@@ -81,4 +84,10 @@ footer {
   padding: 20px;
   text-align: center;
   margin-top: auto; /* ensure footer stays at the bottom */
+}
+.button{
+  padding: 10px 20px;
+  background-color: rgb(39, 111, 204);
+  color: #fff;
+  border-radius: 5px;
 }

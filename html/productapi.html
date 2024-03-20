@@ -1,0 +1,88 @@
+<script>
+    const newProduct = [
+{
+    nama: 'Meja',
+    jumlah: 10,
+    harga: 50000
+},
+{
+    nama: 'Kursi',
+    jumlah: 5,
+    harga: 30000
+},
+{
+    nama: 'Lampu',
+    jumlah: 8,
+    harga: 15000
+},
+{
+    nama: 'Printer',
+    jumlah: 12,
+    harga: 2000000
+},
+{
+    nama: 'Mouse',
+    jumlah: 10,
+    harga: 90000
+}
+]
+const endpoint = 'https://crudcrud.com/api/116ac5a243ad4d44b931df7826c5b3a0'
+
+const requestOptions = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newProduct)
+};
+
+fetch(endpoint, requestOptions)
+.then(response => response.json())
+.then(data => console.log('Produk sukses ditambahkan', data))
+.catch(error => console.error('produk eror ditambahkan'))
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+    <script src="../js/productapi.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API</title>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <table id="product-table">
+        <thead>
+            <tr>
+                <th>Nama Produk</th>
+                <th>Jumlah</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody id="product-table-body">
+
+        </tbody>
+    </table>
+
+    <script>
+        // Ambil data produk dari API dan tampilkan dalam tabel
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(data => {
+                const productTableBody = document.querySelector('#product-table tbody');
+                // Iterasi melalui data produk dan tambahkan baris baru ke tabel
+                data.forEach(product => {
+                    const row = productTableBody.insertRow();
+                    const namaCell = row.insertCell(0);
+                    const jumlahCell = row.insertCell(1);
+                    const hargaCell = row.insertCell(1);
+                    namaCell.textContent = product.nama;
+                    jumlahCell.textContent = product.jumlah;
+                    hargaCell.textContent = '$' + product.harga;
+                });
+            })
+            .catch(error => console.error('Error fetching products:', error));
+    </script>
+</body>
+</html>

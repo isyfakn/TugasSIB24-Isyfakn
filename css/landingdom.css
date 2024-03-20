@@ -10,12 +10,18 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin-bottom: 20;
 }
 
 header {
-    background-color: #f0f0f0;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20220111/pngtree-background-biru-polos-keren-hd-vector-image_982123.jpg");
     padding: 20px;
     text-align: center;
+    letter-spacing: 10px;
 }
 
 .features {
@@ -34,7 +40,7 @@ header {
 .cta {
     background-color: #007bff;
     color: #fff;
-    padding: 50px 20px;
+    padding: 50px 5px;
     text-align: center;
 }
 
@@ -53,3 +59,5 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+  
